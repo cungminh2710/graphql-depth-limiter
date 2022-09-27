@@ -29,9 +29,9 @@
   "author": "Minh Cung",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/stems/graphql-depth-limit/issues"
+    "url": "https://github.com/cungminh2710/graphql-depth-limiter/issues"
   },
-  "homepage": "https://github.com/stems/graphql-depth-limit#readme",
+  "homepage": "https://github.com/cungminh2710/graphql-depth-limiter#readme",
   "peerDependencies": {
     "graphql": "*"
   },
