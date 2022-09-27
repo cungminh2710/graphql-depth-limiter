@@ -165,7 +165,7 @@ fragment musicInfo on Music {
 ## Usage
 
 ```shell
-$ npm install graphql-depth-limit
+$ npm install @cungminh2710/graphql-depth-limit
 ```
 
 It works with [express-graphql](https://github.com/graphql/express-graphql) and [koa-graphql](https://github.com/chentsulin/koa-graphql).
