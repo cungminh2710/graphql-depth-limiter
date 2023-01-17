@@ -15,8 +15,20 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: 16
-      - run: npm ci
-      - run: npm test
+          cache: 'pnpm'
+          cache-dependency-path: |
+            ${{ github.workspace }}/apps/**/.next/cache
+            ${{ github.workspace }}/pnpm-lock.yaml
+      - name: Install Dependencies
+        run: pnpm install --frozen-lockfile
+
+      # - name: Lint
+      #   id: 'lint'
+      #   run: pnpm run lint
+
+      - name: Build
+        id: 'build'
+        run: pnpm run build
 
   publish-npm:
     needs: build

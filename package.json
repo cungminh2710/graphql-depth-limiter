@@ -6,12 +6,11 @@
     "node": ">=14.0.0"
   },
   "scripts": {
-    "build": "tsup src/index.ts --format esm,cjs --dts --treeshake --minify",
+    "build": "tsup src/index.ts --format esm,cjs --dts --treeshake",
     "clean": "bin/clean.sh",
     "format": "prettier --config .prettierrc.yaml --write .",
     "lint": "tslint -p tsconfig.json",
-    "prepare": "npm run build",
-    "prepublishOnly": "npm test && npm run lint",
+    "prepare": "pnpm run build",
     "preversion": "npm run lint",
     "version": "npm run format && git add -A src",
     "postversion": "git push && git push --tags",

@@ -57,8 +57,6 @@ const depthLimit =
 		}
 	};
 
-module.exports = depthLimit;
-
 function getFragments(definitions: readonly DefinitionNode[]): Map<string, FragmentDefinitionNode> {
 	let map = new Map<string, FragmentDefinitionNode>();
 
@@ -135,7 +133,7 @@ function determineDepth(
 }
 
 function seeIfIgnored(node: ASTNode, ignore?: string | RegExp | Function) {
-  if (!ignore) return false;
+	if (!ignore) return false;
 
 	for (let rule of arrify(ignore)) {
 		if (node.kind === Kind.FIELD) {
@@ -159,3 +157,5 @@ function seeIfIgnored(node: ASTNode, ignore?: string | RegExp | Function) {
 	}
 	return false;
 }
+
+export default depthLimit;

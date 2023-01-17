@@ -4,6 +4,7 @@
     "module": "commonjs",
     "lib": ["ESNext"],
     "declaration": true,
+    "declarationMap": true,
     "outDir": "./dist",
     "strict": true
   },
